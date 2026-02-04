@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1rem;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h1 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+header,
+.dice-roll {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dice {
+    width: 10rem;
+    height: 10rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.roll-btn {
+    width: 10rem;
+    height: 3.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    border: none;
+    background: #6F56FF;
+    border-radius: 10rem;
+    margin: 2rem auto;
+}
+
+.roll-btn:hover {
+    width: 10rem;
+    height: 3.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #6F56FF;
+    border: none;
+    background: #E4FF97;
+    border-radius: 10rem;
+    cursor: pointer;
+    margin: 2rem auto;
+}
+
+.roll-btn:active {
+    width: 10rem;
+    height: 3.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #6F56FF;
+    border: none;
+    background: #E4FF97;
+    border-radius: 10rem;
+    cursor: pointer;
+    margin: 2rem auto;
+}
+
+.history-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: height 0.3s ease-in-out;
+}
+
+.history-container {
+    width: 28rem;
+    height: 21rem;
+    max-height: 45rem;
+    background-color: #FCB9C2;
+    margin: 2rem auto;
+    border-radius: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container-bar {
+    width: 28rem;
+    height: 2.5rem;
+    background-color: #FF7D92;
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin: 0;
+    border-radius: 2rem 2rem 0 0;
+    z-index: 10;
+}
+
+.bar-btn {
+    position: absolute;
+    top: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset {
+    left: 1.5rem;
+}
+
+.hide {
+    left: 3.5rem;
+}
+
+.expand {
+    left: 5.5rem;
+}
+
+.bar-btn:hover {
+    cursor: pointer;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.GreenStar {
+    width: 6vw;
+    max-width: 87px;
+    position: absolute;
+    top: 10vh;
+    left: 4vw;
+    animation: rotate-right 12s linear infinite;
+}
+
+.PinkStar {
+    width: 7vw;
+    max-width: 107px;
+    position: absolute;
+    top: 40vh;
+    left: 20vw;
+    animation: rotate-left 7s linear infinite;
+}
+
+.YellowStar {
+    width: 5vw;
+    max-width: 80px;
+    position: absolute;
+    top: 80vh;
+    left: 5vw;
+    animation: rotate-right 7s linear infinite;
+}
+
+.PinkStar2 {
+    width: 7.5vw;
+    max-width: 109px;
+    position: absolute;
+    top: 8vh;
+    left: 70vw;
+    animation: rotate-right 15s linear infinite;
+}
+
+.BlueStar {
+    width: 6.5vw;
+    max-width: 107px;
+    position: absolute;
+    top: 50vh;
+    left: 90vw;
+    animation: rotate-right 12s linear infinite;
+}
+
+.BrownStar {
+    width: 6vw;
+    max-width: 65px;
+    position: absolute;
+    top: 70vh;
+    left: 80vw;
+    animation: rotate-left 10s linear infinite;
+}
+
+@keyframes rotate-right {
+    from {
+      transform: rotate(0deg);  
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-left {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.history-list {
+    width: 100%;
+    max-height: calc(21rem - 2.5rem);
+    overflow-y: auto; 
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+}
+
+.history-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+    background: #FF7D92;
+    border-radius: 10px;
+}
+
+.history-list::-webkit-scrollbar-track {
+    background: #FCB9C2;
+}
+
+.roll-history {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 10px; 
+    font-size: 16px;
+    background: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+    width: 94%; 
+    flex-shrink: 0; 
+    margin-left: 3%;
+    padding-left: 1rem;
+}
+
+.roll-history img {
+    width: 40px; 
+    height: 40px;
+    object-fit: contain; 
+}
+
+.history-container.expanded {
+    position: fixed;
+    top: 10rem;
+    height: 45rem; 
+}
+
+.history-container.expanded .history-list {
+    max-height: calc(45rem - 2.5rem); 
+}
+
+.reset:hover img,
+.reset:active img {
+    content: url("Assets/Reset_hover.svg"); 
+}
+
+.history-container.hidden .history-list {
+    opacity: 80%;
+    pointer-events: none;
+}
+
+.history-container.hidden::after {
+    content: "";
+    position: absolute;
+    top: 2.5rem; 
+    left: 0;
+    width: 100%;
+    height: calc(100% - 2.5rem); 
+    background: rgba(255, 255, 255, 0.6); 
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 0 0 2rem 2rem; 
+    z-index: 5; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+
