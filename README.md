@@ -12,7 +12,7 @@ https://riiach.github.io/Dice-Roll-Simulator/
 
 ## Preview
 
-[!Dice Roll Simulator Preview](Dice_Roll_Simulator.png)
+![Dice Roll Simulator Preview](Dice_Roll_Simulator.png)
 
 ---
 
