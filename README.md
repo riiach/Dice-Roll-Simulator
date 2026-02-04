@@ -2,6 +2,19 @@
 
 A simple and interactive web-based dice roll simulator that allows users to roll a virtual six-sided die and keep track of their roll history.
 
+---
+
+## Live Site
+
+https://riiach.github.io/Dice-Roll-Simulator/
+
+---
+
+## Preview
+
+
+---
+
 ## Features
 
 - **Interactive Dice Rolling**: Click the "Roll" button to simulate rolling a six-sided die
