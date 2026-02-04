@@ -12,7 +12,7 @@ https://riiach.github.io/Dice-Roll-Simulator/
 
 ## Preview
 
-Dice_Roll_Simulator.png
+[!Dice Roll Simulator Preview](Dice_Roll_Simulator.png)
 
 ---
 
@@ -76,6 +76,12 @@ Works in all modern web browsers that support:
 
 This is a personal project for learning and demonstration purposes. Feel free to fork and modify for your own use.
 
-## License
+---
 
-Personal project - no specific license applied.
+## 👤 Author
+
+**Ria Choi**
+💼 www.linkedin.com/in/ria-choi-76a658309
+📧 riiachoii@gmail.com
+
+If you like this project, consider ⭐ starring the repo!
